@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Atlantic Coast Tours AI travel assistant for the west of Ireland" />
+  <title>Atlantic Coast Tours | AI Travel Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">✦</span><span>ATLANTIC<br /><b>COAST</b></span></div>
+      <div class="side-copy"><span class="eyebrow">WEST OF IRELAND</span><h1>Find your<br /><em>way west.</em></h1><p>A little local knowledge goes a long way. Ask about a day out, the weather, or what suits your group.</p></div>
+      <div class="side-bottom"><div class="live-pill"><span></span> LIVE CATALOGUE</div><p>30 experiences across Clare, Galway & Mayo</p><div class="wave-lines"></div></div>
+    </aside>
+    <main class="main">
+      <header class="topbar"><div><span class="eyebrow">YOUR LOCAL GUIDE</span><h2>Atlantic Coast <span>AI Assistant</span></h2></div><div class="top-status"><span class="status-dot"></span><span id="catalogStatus">Connecting to live data</span><button class="icon-button" id="refreshBtn" aria-label="Refresh live data">↻</button></div></header>
+      <section class="chat-layout">
+        <div class="chat-card">
+          <div class="chat-head"><div class="avatar">✦</div><div><strong>Atlantic Coast AI</strong><small>Travel advisor · West of Ireland</small></div><div class="head-badge">AI ASSISTANT</div></div>
+          <div class="chat-stream" id="chatStream"></div>
+          <div class="suggestions" id="suggestions"><button data-prompt="What is your cheapest available tour?">Cheapest available tour</button><button data-prompt="What is the weather like in Galway today?">Weather in Galway</button><button data-prompt="I want a scenic family-friendly day out">Family-friendly ideas</button></div>
+          <form class="composer" id="chatForm"><input id="messageInput" autocomplete="off" placeholder="Ask me about tours, weather or the west…" /><button type="submit" aria-label="Send message">↑</button></form>
+          <div class="composer-note">Live answers from the Atlantic Coast Tours catalogue and Open-Meteo weather</div>
+        </div>
+        <aside class="info-panel"><div class="panel-label">TRIP PLANNER</div><div class="weather-widget"><div class="widget-top"><span>RIGHT NOW</span><span id="weatherLocation">West of Ireland</span></div><div class="weather-main"><div id="weatherIcon">☼</div><div><b id="weatherTemp">--°</b><span id="weatherCondition">Ask for a local forecast</span></div></div><div class="weather-stats"><div><span>WIND</span><b id="weatherWind">--</b></div><div><span>RAIN CHANCE</span><b id="weatherRain">--</b></div></div><button class="text-button" data-prompt="What is the weather like in Galway today?">Get a live forecast <span>→</span></button></div><div class="planner-note"><span class="note-icon">◎</span><div><b>Made for real plans</b><p>I check availability before recommending a tour, so you can book with confidence.</p></div></div><div class="source-list"><div class="panel-label">LIVE SOURCES</div><div><i class="source-check">✓</i><span>Atlantic Coast Tours catalogue</span><small id="lastUpdated">Not yet synced</small></div><div><i class="source-check">✓</i><span>Open-Meteo forecast</span><small>Weather model data</small></div></div></aside>
+      </section>
+      <footer><span>Atlantic Coast Tours · Ireland</span><span>AI can make mistakes. Confirm important booking details before travelling.</span></footer>
+    </main>
+  </div>
+  <script src="llm-config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

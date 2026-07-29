@@ -1,0 +1,6 @@
+name = "atlantic-coast-tours-ai"
+main = "src/index.js"
+compatibility_date = "2026-07-29"
+
+[vars]
+ALLOWED_ORIGIN = "https://sara-eltayeb.github.io"
