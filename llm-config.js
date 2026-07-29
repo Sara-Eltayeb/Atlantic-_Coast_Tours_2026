@@ -5,6 +5,6 @@
  * response: { choices: [{ message: { content: "..." } }] }.
  */
 window.ATLANTIC_LLM_CONFIG = {
-  endpoint: '',
-  model: 'gpt-4o-mini'
+  endpoint: 'https://atlantic-coast-tours-ai-sara.workers.dev',
+  model: 'gemini-2.0-flash'
 };
